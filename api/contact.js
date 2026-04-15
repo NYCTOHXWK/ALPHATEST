@@ -12,14 +12,27 @@ export default async function handler(req, res) {
   const ip = req.headers["x-forwarded-for"] || "unknown";
   const now = Date.now();
 
-  if (!rateLimit[ip]) rateLimit[ip] = [];
-  rateLimit[ip] = rateLimit[ip].filter((t) => now - t < 60000);
+ if (!rateLimit[ip]) {
+  rateLimit[ip] = {
+    count: 1,
+    startTime: now,
+  };
+} else {
+  const user = rateLimit[ip];
 
-  if (rateLimit[ip].length >= 3) {
-    return res.status(429).json({ error: "Too many requests" });
+  if (now - user.startTime > 60000) {
+    rateLimit[ip] = {
+      count: 1,
+      startTime: now,
+    };
+  } else {
+    user.count++;
+
+    if (user.count > 9) {
+      return res.status(429).json({ error: "Too many requests" });
+    }
   }
-
-  rateLimit[ip].push(now);
+}
 
   try {
     const { name, email, message, company } = req.body;
