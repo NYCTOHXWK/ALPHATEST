@@ -66,7 +66,7 @@ export default async function handler(req, res) {
 
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: "your@email.com",
+      to: "takemydick0@gmail.com",
       subject: `New message from ${cleanName}`,
       html: `
         <div style="font-family: Arial; padding: 16px;">
