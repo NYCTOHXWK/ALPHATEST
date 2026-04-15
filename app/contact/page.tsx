@@ -7,9 +7,9 @@ export default function ContactPage() {
         <p className="eyebrow">Contact</p>
         <h1>Start a conversation about your next website or collaboration.</h1>
         <p className="lead narrow">
-          This page includes a working form connected to a Next.js route handler.
-          It validates input and returns a success message, which makes it ready
-          for a future email or database integration.
+          This page includes a working form connected to an email-sending route
+          so messages can be delivered straight to your inbox after the mail
+          service key is configured in Vercel.
         </p>
       </section>
 
@@ -24,7 +24,8 @@ export default function ContactPage() {
             </a>
           </p>
           <p>
-            Email: <a href="mailto:vinay@example.com">vinay@example.com</a>
+            Email:{" "}
+            <a href="mailto:NYCTO.HXWK@GMAIL.com">NYCTO.HXWK@GMAIL.com</a>
           </p>
           <p>
             LinkedIn:{" "}
