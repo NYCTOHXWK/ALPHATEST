@@ -18,3 +18,7 @@ npm run dev
 ## Deploy
 
 Push this repository to GitHub, then import it into Vercel. Vercel will detect Next.js automatically.
+
+## Live Site
+
+Production URL: https://alphatest-beta.vercel.app
