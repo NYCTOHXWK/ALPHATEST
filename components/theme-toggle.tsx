@@ -22,6 +22,8 @@ function getPreferredTheme(): Theme {
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
   const isDark = theme === "dark";
+  const nextThemeLabel = isDark ? "light" : "dark";
+  const nextThemeSymbol = isDark ? "☀" : "☾";
 
   useEffect(() => {
     const nextTheme = getPreferredTheme();
@@ -41,12 +43,14 @@ export function ThemeToggle() {
       type="button"
       className="theme-toggle"
       onClick={toggleTheme}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={`Switch to ${nextThemeLabel} mode`}
       aria-pressed={isDark}
-      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={`Switch to ${nextThemeLabel} mode`}
     >
       <span className="theme-toggle-track">
-        <span className="theme-toggle-thumb">{isDark ? "Moon" : "Sun"}</span>
+        <span className="theme-toggle-thumb" aria-hidden="true">
+          {nextThemeSymbol}
+        </span>
       </span>
     </button>
   );

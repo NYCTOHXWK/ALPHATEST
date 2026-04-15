@@ -37,6 +37,25 @@ export default function ContactPage() {
 
         <ContactForm />
       </section>
+
+      <section className="surface-card contact-mobile-info">
+        <p className="mini-label">Contact Details</p>
+        <p>
+          GitHub:{" "}
+          <a href="https://github.com/NYCTOHXWK" target="_blank" rel="noreferrer">
+            github.com/NYCTOHXWK
+          </a>
+        </p>
+        <p>
+          Email: <a href="mailto:NYCTO.HXWK@GMAIL.com">NYCTO.HXWK@GMAIL.com</a>
+        </p>
+        <p>
+          LinkedIn:{" "}
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            Add your real profile here
+          </a>
+        </p>
+      </section>
     </div>
   );
 }
