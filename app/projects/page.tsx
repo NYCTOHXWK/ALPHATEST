@@ -6,16 +6,17 @@ export default function ProjectsPage() {
     <div className="page-stack">
       <section className="page-intro">
         <p className="eyebrow">Projects</p>
-        <h1>Work that balances clarity, speed, and personality.</h1>
+        <h1>Projects in EV systems, IoT, security, and education technology.</h1>
         <p className="lead narrow">
-          A project page built for real portfolio growth. Replace these examples
-          with your own shipped work, case studies, GitHub repos, and live demos.
+          These projects reflect my practical experience in building real systems—from
+          EV conversion and drone prototyping to RFID security and student record management.
         </p>
       </section>
 
       <section className="project-list">
         {siteProjects.map((project) => (
           <article key={project.title} className="project-showcase surface-card">
+            <img src={project.image} alt={`${project.title} preview`} className="project-showcase-image" />
             <div className="project-showcase-copy">
               <span className="project-tag">{project.category}</span>
               <h2>{project.title}</h2>
@@ -29,8 +30,16 @@ export default function ProjectsPage() {
             <div className="project-side-panel">
               <p className="mini-label">Stack</p>
               <p>{project.stack}</p>
+              {project.projectUrl ? (
+                <a className="text-link" href={project.projectUrl} target="_blank" rel="noreferrer">
+                  Related website
+                </a>
+              ) : null}
+              <Link className="text-link" href={`/projects/${project.slug}`}>
+                Open project details
+              </Link>
               <Link className="text-link" href="/contact">
-                Ask about this project
+                Contact for details
               </Link>
             </div>
           </article>
