@@ -1,6 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
-import Link from "next/link";
 
 const certs = [
   {
@@ -28,38 +26,32 @@ const certs = [
     issuer: "Samatrix.io",
     link: "https://verify.netcredential.com/roy80vpaR2",
   },
+  {
+    title: "Samatrix Certification",
+    issuer: "Samatrix.io",
+    link: "https://verify.netcredential.com/RoyBqE6d1",
+  },
+  {
+    title: "Samatrix Certification",
+    issuer: "Samatrix.io",
+    link: "https://verify.netcredential.com/roy8uTTG4hU",
+  },
 ];
 
 export default function CertSlides() {
   return (
-    <section className="bg-black text-white">
-      
-      <div className="h-screen flex flex-col justify-center items-center text-center">
-        <h1 className="text-6xl font-bold mb-4">Certifications</h1>
-        <Link href="/certifications">
-          <span className="text-blue-400 cursor-pointer">
-            View All →
-          </span>
-        </Link>
-      </div>
+    <div>
+      <h2>Certifications</h2>
 
-      {certs.map((cert, i) => (
-        <div key={i} className="h-screen flex flex-col justify-center items-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold mb-4"
-          >
-            {cert.title}
-          </motion.h1>
-
-          <p className="text-gray-400 mb-4">{cert.issuer}</p>
-
-          <a href={cert.link} target="_blank" className="text-blue-400">
-            View Certificate →
-          </a>
-        </div>
-      ))}
-    </section>
+      <ul>
+        {certs.map((cert, i) => (
+          <li key={i}>
+            <a href={cert.link} target="_blank">
+              {cert.title} - {cert.issuer}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
