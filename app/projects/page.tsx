@@ -35,6 +35,9 @@ export default function ProjectsPage() {
                   Related website
                 </a>
               ) : null}
+              <Link className="text-link" href={`/projects/${project.slug}`}>
+                Open project details
+              </Link>
               <Link className="text-link" href="/contact">
                 Contact for details
               </Link>

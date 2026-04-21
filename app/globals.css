@@ -396,6 +396,11 @@ html[data-theme="dark"] .button-secondary {
   gap: 1rem;
 }
 
+.project-card {
+  text-decoration: none;
+  color: inherit;
+}
+
 .project-side-panel {
   display: grid;
   align-content: start;
@@ -846,38 +851,34 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .contact-form {
     padding: 1rem;
   }
-}  
-/* === CERT SLIDES FIX === */
-
-/* Remove spacing for last section */
-.page-stack > section:last-child {
-  padding: 0;
-  margin: 0;
-}
-
-/* Ensure full height slides work */
-.page-stack > section:last-child section {
-  height: 100vh;
 }
 
 
-.cert-slider {
+.cert-carousel {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(280px, 360px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
   gap: 1rem;
-  overflow-x: auto;
-  padding: 0.5rem 0.2rem 0.8rem;
-  scroll-snap-type: x mandatory;
+  margin-top: 1rem;
 }
 
 .cert-card {
-  scroll-snap-align: start;
   border-radius: 26px;
   border: 1px solid rgba(148, 163, 184, 0.3);
   background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.82));
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
   overflow: hidden;
+  transition: transform 280ms ease, opacity 280ms ease;
+}
+
+.cert-card-side {
+  transform: scale(0.92);
+  opacity: 0.82;
+}
+
+.cert-card-center {
+  transform: scale(1.02);
+  opacity: 1;
 }
 
 html[data-theme="dark"] .cert-card {
@@ -903,4 +904,53 @@ html[data-theme="dark"] .cert-card {
 
 .cert-content p {
   margin: 0.25rem 0;
+}
+
+.project-detail-layout {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+
+.project-hero-image {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.project-detail-panels {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-detail-panel {
+  padding: 1rem;
+}
+
+.project-detail-actions {
+  display: grid;
+  gap: 0.55rem;
+}
+
+@media (max-width: 960px) {
+  .project-detail-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .cert-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card-side {
+    display: none;
+  }
+
+  .cert-card-center {
+    transform: none;
+  }
 }

@@ -77,12 +77,12 @@ export default function HomePage() {
         </div>
         <div className="project-grid">
           {siteProjects.slice(0, 3).map((project) => (
-            <article key={project.title} className="project-card surface-card">
+            <Link key={project.slug} href={`/projects/${project.slug}`} className="project-card surface-card">
               <img src={project.image} alt={`${project.title} preview`} className="project-preview" />
               <span className="project-tag">{project.category}</span>
               <h3>{project.title}</h3>
               <p>{project.summary}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

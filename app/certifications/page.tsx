@@ -7,7 +7,7 @@ export default function CertificationsPage() {
         <p className="eyebrow">Certifications</p>
         <h1>Verified licenses and certifications.</h1>
         <p className="lead narrow">
-          Swipe through all certificates in iOS-style cards and open any credential to verify it.
+          Auto-scrolling certification cards keep the focus on the center credential every 3 seconds.
         </p>
       </section>
 
