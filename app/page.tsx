@@ -5,13 +5,14 @@ import CertSlides from "@/components/CertSlides";
 export default function HomePage() {
   return (
     <div className="page-stack">
+      {/* HERO SECTION */}
       <section className="hero-panel">
         <div className="hero-copy">
-          <p className="eyebrow">Portfolio Website</p>
-          <h1>Web experiences that feel modern, clear, and ready to ship.</h1>
+          <p className="eyebrow">AI • IoT • Embedded Systems</p>
+          <h1>Building real-world systems from hardware to intelligent software.</h1>
           <p className="lead">
-            I am Vinay, a developer focused on responsive UI, strong visual
-            direction, and building websites that are both useful and polished.
+            I am Vinay, a Computer Science Engineer specializing in AI & Machine Learning,
+            with hands-on experience in IoT systems, embedded development, and data analytics.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/projects">
@@ -25,7 +26,7 @@ export default function HomePage() {
 
         <div className="hero-card surface-card">
           <p className="eyebrow">Quick Snapshot</p>
-          <h2>Available for portfolio work, freelance builds, and collaborations.</h2>
+          <h2>Available for AI, IoT, and full-stack engineering projects.</h2>
           <div className="stats-grid">
             {siteStats.map((item) => (
               <div key={item.label} className="stat-item">
@@ -37,29 +38,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ABOUT SECTION */}
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">About</p>
-          <h2>Design energy with engineering discipline.</h2>
+          <h2>Engineering intelligent systems with real-world impact.</h2>
         </div>
         <div className="two-column-copy">
           <p>
-            I enjoy building digital work that feels intentional from the first
-            screen to the last detail. Clean layouts, smooth interactions, and a
-            clear sense of hierarchy matter to me.
+            I focus on building practical engineering solutions combining software,
+            hardware, and data. My work includes EV system conversion, IoT automation,
+            and intelligent dashboards for real-world applications.
           </p>
           <p>
-            This portfolio is built as a real multi-page Next.js project so it
-            can live comfortably on Vercel, evolve over time, and connect cleanly
-            to GitHub for version control and deployment.
+            This portfolio reflects my work across AI, embedded systems, and data analytics,
+            designed to showcase real-world problem solving and scalable solutions.
           </p>
         </div>
       </section>
 
+      {/* PROJECTS SECTION */}
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Highlights</p>
-          <h2>Selected work and ideas in motion.</h2>
+          <h2>Projects across AI, IoT, and Embedded Systems.</h2>
         </div>
         <div className="project-grid">
           {siteProjects.slice(0, 3).map((project) => (
@@ -70,10 +72,10 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-        </section>
+      </section>
 
-      {/* ADD THIS */}
-      <section>
+      {/* CERTIFICATIONS SECTION */}
+      <section className="content-section">
         <CertSlides />
       </section>
 
