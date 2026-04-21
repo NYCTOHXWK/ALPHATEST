@@ -1,67 +1,36 @@
 "use client";
 
-const certs = [
-  {
-    title: "Big Data Engineer",
-    issuer: "IBM",
-    link: "https://courses.ibmcep.cognitiveclass.ai/certificates/51588b3bb671473385a04ab424b8c506",
-  },
-  {
-    title: "Certificate of Accomplishment",
-    issuer: "Samatrix Consulting Private Limited",
-    link: "https://verify.netcredential.com/roy8JaF1yJ",
-  },
-  {
-    title: "Certificate of Accomplishment",
-    issuer: "Samatrix Consulting Private Limited",
-    link: "https://verify.netcredential.com/roy80vpaR2",
-  },
-  {
-    title: "Certificate of Accomplishment",
-    issuer: "Samatrix Consulting Private Limited",
-    link: "https://verify.netcredential.com/roy8ktLKpQ",
-  },
-  {
-    title: "Certificate of Accomplishment",
-    issuer: "Samatrix Consulting Private Limited",
-    link: "https://verify.netcredential.com/roy8ajhyA0",
-  },
-  {
-    title: "Certificate of Accomplishment",
-    issuer: "Samatrix Consulting Private Limited",
-    link: "https://verify.netcredential.com/roy8qjEaX1",
-  },
-  {
-    title: "Certificate of Accomplishment",
-    issuer: "Samatrix Consulting Private Limited",
-    link: "https://verify.netcredential.com/roy84TUGhU",
-  },
-  {
-    title: "Data Analysis with Python",
-    issuer: "IBM",
-    link: "https://courses.ibmcep.cognitiveclass.ai/certificates/c84312958cd14a168918866e584699a1",
-  },
-  {
-    title: "AWS APAC",
-    issuer: "Forage",
-    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/aMXsTyHdNT5hucn25",
-  },
-];
+import { certifications } from "@/lib/certifications-data";
 
-export default function CertSlides() {
+type CertSlidesProps = {
+  compact?: boolean;
+};
+
+export default function CertSlides({ compact = false }: CertSlidesProps) {
   return (
     <div>
-      <h2>Certifications</h2>
-
-      <ul>
-        {certs.map((cert, i) => (
-          <li key={i}>
-            <a href={cert.link} target="_blank">
-              {cert.title} - {cert.issuer}
-            </a>
-          </li>
+      {!compact && <h2>Certifications</h2>}
+      <div className="cert-slider" role="list" aria-label="Certification slides">
+        {certifications.map((cert) => (
+          <article className="cert-card" key={cert.credentialId} role="listitem">
+            <img
+              className="cert-image"
+              src={cert.image}
+              alt={`${cert.issuer} certificate preview`}
+              loading="lazy"
+            />
+            <div className="cert-content">
+              <p className="mini-label">{cert.issuer}</p>
+              <h3>{cert.title}</h3>
+              <p>Issued {cert.issued}</p>
+              <p>Credential ID: {cert.credentialId}</p>
+              <a className="text-link" href={cert.link} target="_blank" rel="noreferrer">
+                Show credential
+              </a>
+            </div>
+          </article>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

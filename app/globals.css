@@ -798,3 +798,48 @@ html[data-theme="dark"] .theme-toggle-thumb {
 .page-stack > section:last-child section {
   height: 100vh;
 }
+
+
+.cert-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 360px);
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.2rem 0.8rem;
+  scroll-snap-type: x mandatory;
+}
+
+.cert-card {
+  scroll-snap-align: start;
+  border-radius: 26px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.82));
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .cert-card {
+  background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(2,6,23,0.92));
+  border-color: rgba(100, 116, 139, 0.35);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+}
+
+.cert-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.cert-content {
+  padding: 1rem 1rem 1.2rem;
+}
+
+.cert-content h3 {
+  margin: 0.25rem 0 0.45rem;
+}
+
+.cert-content p {
+  margin: 0.25rem 0;
+}
