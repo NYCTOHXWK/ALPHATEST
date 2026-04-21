@@ -798,3 +798,43 @@ html[data-theme="dark"] .theme-toggle-thumb {
 .page-stack > section:last-child section {
   height: 100vh;
 }
+/* === PREMIUM UI SYSTEM === */
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --blur: blur(16px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apple-style easing */
+* {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Glass card */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* Lift on hover */
+.surface-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Section spacing refinement */
+.content-section {
+  padding: 80px 20px;
+}
+
+/* Headings polish */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
