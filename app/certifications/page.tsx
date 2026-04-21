@@ -19,6 +19,11 @@ export default function CertificationsPage() {
             AWS APAC - Forage
           </a>
         </li>
+        <li>
+          <a href="https://verify.netcredential.com/roy8JaF1yJ">
+            Samatrix Certification - Samatrix.io
+          </a>
+        </li>
       </ul>
     </div>
   );

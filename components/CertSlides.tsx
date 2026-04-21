@@ -36,6 +36,11 @@ const certs = [
     issuer: "Samatrix.io",
     link: "https://verify.netcredential.com/roy8uTTG4hU",
   },
+  {
+    title: "Samatrix Certification",
+    issuer: "Samatrix.io",
+    link: "https://verify.netcredential.com/roy8JaF1yJ",
+  },
 ];
 
 export default function CertSlides() {
