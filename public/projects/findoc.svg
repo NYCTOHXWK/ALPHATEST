@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="FinDoc project preview">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1f3b"/><stop offset="1" stop-color="#1f4c8e"/></linearGradient></defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <rect x="60" y="52" width="520" height="256" rx="20" fill="#ffffff" opacity="0.95"/>
+  <rect x="90" y="92" width="210" height="20" rx="10" fill="#d5e6ff"/>
+  <rect x="90" y="132" width="460" height="14" rx="7" fill="#e7eef8"/>
+  <rect x="90" y="160" width="420" height="14" rx="7" fill="#e7eef8"/>
+  <rect x="90" y="188" width="360" height="14" rx="7" fill="#e7eef8"/>
+  <circle cx="500" cy="108" r="34" fill="#1f4c8e"/>
+  <path d="M484 108h32M500 92v32" stroke="#fff" stroke-width="5"/>
+  <text x="90" y="245" fill="#123463" font-size="34" font-family="Arial" font-weight="700">FinDoc</text>
+</svg>

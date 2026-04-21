@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteProjects, siteStats } from "@/lib/site-data";
+import { education, jobRoles, siteProjects, siteStats } from "@/lib/site-data";
 import CertSlides from "@/components/CertSlides";
 
 export default function HomePage() {
@@ -11,8 +11,18 @@ export default function HomePage() {
           <h1>Vinay — Computer Science Engineer building practical AI and IoT solutions.</h1>
           <p className="lead">
             I am currently pursuing B.Tech in Computer Science and Engineering (AI & ML)
-            at K.R. Mangalam University (Aug 2023 – Jun 2027), with internship experience
-            in manufacturing analytics and IoT development.
+            at{" "}
+            <a
+              className="inline-brand-link"
+              href={education.website}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={education.logo} alt={`${education.name} logo`} />
+              <span>{education.name}</span>
+            </a>{" "}
+            ({education.duration}), with internship experience in manufacturing analytics
+            and IoT development.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/projects">
@@ -44,16 +54,19 @@ export default function HomePage() {
           <h2>Experience across manufacturing analytics, IoT, and embedded systems.</h2>
         </div>
         <div className="two-column-copy">
-          <p>
-            At JTEKT India Ltd. (June 2025 – July 2025), I completed an 8-week industrial
-            internship where I worked with DHR-1 and manufacturing teams to build a visual
-            dashboard for defect and supply tracking.
-          </p>
-          <p>
-            During my KEIC IoT Internship (July 2024 – Sept 2024), I developed and deployed
-            IoT solutions for real-time data collection and device monitoring using Arduino,
-            Raspberry Pi, and sensors.
-          </p>
+          {jobRoles.map((role) => (
+            <article key={role.company} className="job-role-card">
+              <p className="mini-label">{role.role}</p>
+              <h3>
+                <a href={role.website} target="_blank" rel="noreferrer">
+                  <img src={role.logo} alt={`${role.company} logo`} />
+                  <span>{role.company}</span>
+                </a>
+              </h3>
+              <p>{role.duration}</p>
+              <p>{role.summary}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -65,6 +78,7 @@ export default function HomePage() {
         <div className="project-grid">
           {siteProjects.slice(0, 3).map((project) => (
             <article key={project.title} className="project-card surface-card">
+              <img src={project.image} alt={`${project.title} preview`} className="project-preview" />
               <span className="project-tag">{project.category}</span>
               <h3>{project.title}</h3>
               <p>{project.summary}</p>

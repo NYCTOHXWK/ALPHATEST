@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Student management system preview">
+  <rect width="640" height="360" fill="#102433"/>
+  <rect x="90" y="60" width="460" height="240" rx="18" fill="#f2f8ff"/>
+  <rect x="90" y="60" width="460" height="48" rx="18" fill="#1b7fd1"/>
+  <circle cx="128" cy="84" r="8" fill="#f2f8ff"/>
+  <circle cx="152" cy="84" r="8" fill="#f2f8ff"/>
+  <circle cx="176" cy="84" r="8" fill="#f2f8ff"/>
+  <rect x="120" y="130" width="180" height="22" rx="11" fill="#d3e9ff"/>
+  <rect x="120" y="168" width="390" height="14" rx="7" fill="#e4f1ff"/>
+  <rect x="120" y="194" width="350" height="14" rx="7" fill="#e4f1ff"/>
+  <rect x="120" y="220" width="310" height="14" rx="7" fill="#e4f1ff"/>
+  <text x="120" y="286" fill="#1d4f7d" font-size="34" font-family="Arial" font-weight="700">Student Management</text>
+</svg>

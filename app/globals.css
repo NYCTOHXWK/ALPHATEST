@@ -368,8 +368,27 @@ html[data-theme="dark"] .button-secondary {
 
 .project-showcase {
   display: grid;
-  grid-template-columns: 1.4fr 0.7fr;
+  grid-template-columns: 1fr 1.2fr 0.7fr;
   gap: 1.5rem;
+}
+
+.project-preview,
+.project-showcase-image {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.project-preview {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 0.8rem;
+}
+
+.project-showcase-image {
+  height: 100%;
+  min-height: 220px;
 }
 
 .project-showcase-copy {
@@ -409,6 +428,40 @@ html[data-theme="dark"] .project-side-panel {
 .text-link {
   font-weight: 700;
   color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.inline-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.inline-brand-link img,
+.job-role-card h3 img {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.job-role-card {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.1rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.job-role-card h3 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   text-decoration: none;
 }
 
@@ -586,7 +639,7 @@ html[data-theme="dark"] .theme-toggle-thumb {
     grid-column: 1 / -1;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.55rem;
   }
 
@@ -728,6 +781,10 @@ html[data-theme="dark"] .theme-toggle-thumb {
     padding: 1.1rem;
   }
 
+  .project-showcase-image {
+    min-height: 180px;
+  }
+
   .project-side-panel {
     gap: 0.65rem;
     padding: 0.95rem;
@@ -771,6 +828,10 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .nav-link {
     padding: 0.68rem 0.45rem;
     font-size: 0.88rem;
+  }
+
+  .inline-brand-link {
+    white-space: normal;
   }
 
   h1 {
