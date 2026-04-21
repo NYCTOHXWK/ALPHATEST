@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Drone project preview">
+  <rect width="640" height="360" fill="#0e1b33"/>
+  <circle cx="180" cy="90" r="45" stroke="#8ad0ff" stroke-width="8" fill="none"/>
+  <circle cx="460" cy="90" r="45" stroke="#8ad0ff" stroke-width="8" fill="none"/>
+  <circle cx="180" cy="270" r="45" stroke="#8ad0ff" stroke-width="8" fill="none"/>
+  <circle cx="460" cy="270" r="45" stroke="#8ad0ff" stroke-width="8" fill="none"/>
+  <path d="M210 110L320 180L430 110M210 250L320 180L430 250" stroke="#b8e7ff" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <rect x="275" y="145" width="90" height="70" rx="12" fill="#5cb3ff"/>
+  <text x="38" y="52" fill="#d9f2ff" font-size="40" font-family="Arial" font-weight="700">Arduino Drone</text>
+</svg>
