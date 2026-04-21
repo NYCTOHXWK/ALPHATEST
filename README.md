@@ -26,4 +26,4 @@ Production URL: https://alphatest-beta.vercel.app
 ## Contact Form Email
 
 Set `RESEND_API_KEY` in Vercel project environment variables to enable
-portfolio contact emails to be sent to `NYCTO.HXWK@GMAIL.com`.
+portfolio contact emails to be sent to `vinayyadav2546@gmail.com`.

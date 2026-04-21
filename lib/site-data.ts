@@ -1,44 +1,68 @@
 export const siteStats = [
-  { label: "Focus", value: "Frontend Development" },
-  { label: "Style", value: "Bold and responsive UI" },
-  { label: "Deployment", value: "Vercel-ready structure" }
+  { label: "Education", value: "B.Tech CSE (AI & ML)" },
+  { label: "Internships", value: "2 Industry Roles" },
+  { label: "Certifications", value: "9 Verified Credentials" }
 ];
 
 export const siteProjects = [
   {
-    category: "Landing Page",
-    title: "Launch Story Website",
+    category: "Finance",
+    title: "FinDoc",
     summary:
-      "A polished product landing page designed for strong first impressions, mobile responsiveness, and clear conversion paths.",
-    stack: "Next.js, CSS, responsive layout",
+      "Built in collaboration with Satya Sai Associates, Rewari for HDFC Bank DSA to support document-driven finance workflows.",
+    stack: "Web application development, documentation workflows",
     details: [
-      "Built around a striking hero section and layered visual hierarchy.",
-      "Designed for clean navigation and fast content scanning.",
-      "Structured so future analytics, CTAs, and case-study sections fit naturally."
+      "Collaborated with an external team to align requirements and delivery.",
+      "Focused on reliable handling of finance-related process data.",
+      "Structured the solution to support day-to-day operational use."
     ]
   },
   {
-    category: "Dashboard",
-    title: "Project Tracker Interface",
+    category: "EV Systems",
+    title: "MotoVolt",
     summary:
-      "A dashboard concept for teams who want lightweight project visibility without visual clutter or heavy workflow overhead.",
-    stack: "Next.js, component-based UI, client interactions",
+      "Developed an EV conversion project where a petrol bike was converted into a fully electric vehicle.",
+    stack: "Embedded integration, electrical systems, prototyping",
     details: [
-      "Balances data density with clarity across desktop and tablet layouts.",
-      "Emphasizes cards, spacing, and readable section grouping.",
-      "Prepared for future API or database integration."
+      "Worked on component-level planning for conversion feasibility.",
+      "Integrated electrical subsystems for practical operation.",
+      "Validated the converted setup through hands-on testing."
     ]
   },
   {
-    category: "Portfolio",
-    title: "Personal Brand Site",
+    category: "IoT & Robotics",
+    title: "Arduino Based Drone",
     summary:
-      "A multi-page portfolio system that introduces the developer, presents selected work, and makes contact straightforward.",
-    stack: "Next.js App Router, Vercel deployment flow",
+      "Created a drone prototype based on Arduino UNO with sensor-assisted control and testing.",
+    stack: "Arduino UNO, sensors, embedded prototyping",
     details: [
-      "Includes dedicated Home, Projects, and Contact pages.",
-      "Uses a shared layout and navigation for consistency.",
-      "Connects cleanly to GitHub and Vercel workflows."
+      "Assembled and configured hardware for stable drone operation.",
+      "Used microcontroller programming for control behavior.",
+      "Iterated on design through build-test cycles."
+    ]
+  },
+  {
+    category: "Security",
+    title: "Access Management System",
+    summary:
+      "Implemented an RFID-based access control system for secure entry management.",
+    stack: "RFID, Arduino/microcontroller logic, automation",
+    details: [
+      "Designed identity-driven entry validation workflows.",
+      "Implemented RFID read and authorization handling.",
+      "Focused on low-cost and practical deployment design."
+    ]
+  },
+  {
+    category: "Education Tech",
+    title: "S.M.S (Student Management System)",
+    summary:
+      "Built a Student Management System using Python to organize core student records and operations.",
+    stack: "Python, data management, application logic",
+    details: [
+      "Developed core modules for student information handling.",
+      "Implemented data entry and retrieval flows.",
+      "Designed for clarity and ease of use in academic settings."
     ]
   }
 ];

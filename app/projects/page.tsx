@@ -6,10 +6,10 @@ export default function ProjectsPage() {
     <div className="page-stack">
       <section className="page-intro">
         <p className="eyebrow">Projects</p>
-        <h1>Work that balances clarity, speed, and personality.</h1>
+        <h1>Projects in EV systems, IoT, security, and education technology.</h1>
         <p className="lead narrow">
-          A project page built for real portfolio growth. Replace these examples
-          with your own shipped work, case studies, GitHub repos, and live demos.
+          These projects reflect my practical experience in building real systems—from
+          EV conversion and drone prototyping to RFID security and student record management.
         </p>
       </section>
 
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
               <p className="mini-label">Stack</p>
               <p>{project.stack}</p>
               <Link className="text-link" href="/contact">
-                Ask about this project
+                Contact for details
               </Link>
             </div>
           </article>

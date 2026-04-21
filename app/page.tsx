@@ -5,14 +5,14 @@ import CertSlides from "@/components/CertSlides";
 export default function HomePage() {
   return (
     <div className="page-stack">
-      {/* HERO SECTION */}
       <section className="hero-panel">
         <div className="hero-copy">
-          <p className="eyebrow">AI • IoT • Embedded Systems</p>
-          <h1>Building real-world systems from hardware to intelligent software.</h1>
+          <p className="eyebrow">AI & ML • Data Analytics • IoT</p>
+          <h1>Vinay — Computer Science Engineer building practical AI and IoT solutions.</h1>
           <p className="lead">
-            I am Vinay, a Computer Science Engineer specializing in AI & Machine Learning,
-            with hands-on experience in IoT systems, embedded development, and data analytics.
+            I am currently pursuing B.Tech in Computer Science and Engineering (AI & ML)
+            at K.R. Mangalam University (Aug 2023 – Jun 2027), with internship experience
+            in manufacturing analytics and IoT development.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/projects">
@@ -26,7 +26,7 @@ export default function HomePage() {
 
         <div className="hero-card surface-card">
           <p className="eyebrow">Quick Snapshot</p>
-          <h2>Available for AI, IoT, and full-stack engineering projects.</h2>
+          <h2>Open to AI, data analytics, and embedded systems opportunities.</h2>
           <div className="stats-grid">
             {siteStats.map((item) => (
               <div key={item.label} className="stat-item">
@@ -38,30 +38,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">About</p>
-          <h2>Engineering intelligent systems with real-world impact.</h2>
+          <h2>Experience across manufacturing analytics, IoT, and embedded systems.</h2>
         </div>
         <div className="two-column-copy">
           <p>
-            I focus on building practical engineering solutions combining software,
-            hardware, and data. My work includes EV system conversion, IoT automation,
-            and intelligent dashboards for real-world applications.
+            At JTEKT India Ltd. (June 2025 – July 2025), I completed an 8-week industrial
+            internship where I worked with DHR-1 and manufacturing teams to build a visual
+            dashboard for defect and supply tracking.
           </p>
           <p>
-            This portfolio reflects my work across AI, embedded systems, and data analytics,
-            designed to showcase real-world problem solving and scalable solutions.
+            During my KEIC IoT Internship (July 2024 – Sept 2024), I developed and deployed
+            IoT solutions for real-time data collection and device monitoring using Arduino,
+            Raspberry Pi, and sensors.
           </p>
         </div>
       </section>
 
-      {/* PROJECTS SECTION */}
       <section className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Highlights</p>
-          <h2>Projects across AI, IoT, and Embedded Systems.</h2>
+          <h2>Selected projects from my CV.</h2>
         </div>
         <div className="project-grid">
           {siteProjects.slice(0, 3).map((project) => (
@@ -74,11 +73,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CERTIFICATIONS SECTION */}
       <section className="content-section">
         <CertSlides />
       </section>
-
     </div>
   );
 }

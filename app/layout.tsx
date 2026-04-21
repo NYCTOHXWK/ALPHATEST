@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Vinay | Portfolio",
-  description: "A personal portfolio for Vinay with featured projects and a contact page."
+  description: "Vinay's portfolio featuring AI/ML, IoT, and data analytics projects, certifications, and contact details."
 };
 
 export default function RootLayout({
