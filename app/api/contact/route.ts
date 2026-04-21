@@ -7,7 +7,7 @@ type ContactPayload = {
   message?: string;
 };
 
-const destinationEmail = "vinayyadav2546@gmail.com";
+const destinationEmail = "nycto.hxwk@gmail.com";
 
 function getResendClient() {
   const apiKey = process.env.RESEND_API_KEY;

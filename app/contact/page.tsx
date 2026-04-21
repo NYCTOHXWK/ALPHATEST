@@ -17,7 +17,13 @@ export default function ContactPage() {
           <h2>Use the form or connect directly.</h2>
           <p>Location: Gurgaon, Haryana, India</p>
           <p>
-            Email: <a href="mailto:vinayyadav2546@gmail.com">vinayyadav2546@gmail.com</a>
+            Email: <a href="mailto:nycto.hxwk@gmail.com">nycto.hxwk@gmail.com</a>
+          </p>
+          <p>
+            LinkedIn:{" "}
+            <a href="https://www.linkedin.com/in/raovinayyadav/" target="_blank" rel="noreferrer">
+              linkedin.com/in/raovinayyadav
+            </a>
           </p>
           <p>
             Phone: <a href="tel:+918284820875">+91 8284820875</a>
@@ -31,7 +37,13 @@ export default function ContactPage() {
         <p className="mini-label">Contact Details</p>
         <p>Location: Gurgaon, Haryana, India</p>
         <p>
-          Email: <a href="mailto:vinayyadav2546@gmail.com">vinayyadav2546@gmail.com</a>
+          Email: <a href="mailto:nycto.hxwk@gmail.com">nycto.hxwk@gmail.com</a>
+        </p>
+        <p>
+          LinkedIn:{" "}
+          <a href="https://www.linkedin.com/in/raovinayyadav/" target="_blank" rel="noreferrer">
+            linkedin.com/in/raovinayyadav
+          </a>
         </p>
         <p>
           Phone: <a href="tel:+918284820875">+91 8284820875</a>
