@@ -52,6 +52,17 @@ export default function ProjectDetailsPage({ params }: ProjectDetailsPageProps) 
             </ul>
           </article>
           <article className="surface-card project-detail-panel">
+            <p className="mini-label">Project Tools</p>
+            <div className="tool-grid">
+              {project.tools.map((tool) => (
+                <div key={tool.name} className="tool-chip">
+                  <img src={tool.image} alt={`${tool.name} icon`} />
+                  <span>{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </article>
+          <article className="surface-card project-detail-panel">
             <p className="mini-label">Challenges</p>
             <ul className="detail-list">
               {project.challenges.map((item) => (

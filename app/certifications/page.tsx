@@ -12,7 +12,7 @@ export default function CertificationsPage() {
       </section>
 
       <section className="content-section">
-        <CertSlides compact />
+        <CertSlides compact showAll />
       </section>
     </div>
   );

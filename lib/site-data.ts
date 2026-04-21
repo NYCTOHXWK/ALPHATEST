@@ -18,6 +18,7 @@ export type SiteProject = {
   keyModules: string[];
   challenges: string[];
   outcomes: string[];
+  tools: { name: string; image: string }[];
 };
 
 export const siteProjects: SiteProject[] = [
@@ -54,6 +55,11 @@ export const siteProjects: SiteProject[] = [
     outcomes: [
       "Improved visibility of pending files and bottlenecks.",
       "Created a repeatable process baseline for operations teams."
+    ],
+    tools: [
+      { name: "Next.js", image: "/tools/nextjs.svg" },
+      { name: "Workflow Engine", image: "/tools/workflow.svg" },
+      { name: "Analytics Panel", image: "/tools/analytics.svg" }
     ]
   },
   {
@@ -88,6 +94,11 @@ export const siteProjects: SiteProject[] = [
     outcomes: [
       "Successful functional EV conversion prototype.",
       "Improved understanding of practical conversion constraints."
+    ],
+    tools: [
+      { name: "BLDC Motor", image: "/tools/bldc.svg" },
+      { name: "Battery BMS", image: "/tools/bms.svg" },
+      { name: "Motor Controller", image: "/tools/controller.svg" }
     ]
   },
   {
@@ -123,6 +134,11 @@ export const siteProjects: SiteProject[] = [
     outcomes: [
       "Achieved stable short-duration flight behavior.",
       "Produced a reusable tuning workflow for future iterations."
+    ],
+    tools: [
+      { name: "Arduino UNO", image: "/tools/arduino.svg" },
+      { name: "IMU Sensor", image: "/tools/imu.svg" },
+      { name: "ESC", image: "/tools/esc.svg" }
     ]
   },
   {
@@ -157,6 +173,11 @@ export const siteProjects: SiteProject[] = [
     outcomes: [
       "Delivered a functional prototype for secure entry scenarios.",
       "Improved reliability of identity-based gate control."
+    ],
+    tools: [
+      { name: "RFID Reader", image: "/tools/rfid.svg" },
+      { name: "Relay Module", image: "/tools/relay.svg" },
+      { name: "Access Logs", image: "/tools/logs.svg" }
     ]
   },
   {
@@ -191,6 +212,11 @@ export const siteProjects: SiteProject[] = [
     outcomes: [
       "Reduced manual overhead in student record handling.",
       "Established a clean base for future attendance/exam modules."
+    ],
+    tools: [
+      { name: "Python", image: "/tools/python.svg" },
+      { name: "SQLite", image: "/tools/sqlite.svg" },
+      { name: "CRUD API", image: "/tools/crud.svg" }
     ]
   }
 ];
