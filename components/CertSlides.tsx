@@ -7,39 +7,44 @@ const certs = [
     link: "https://courses.ibmcep.cognitiveclass.ai/certificates/51588b3bb671473385a04ab424b8c506",
   },
   {
-    title: "Data Analysis with Python",
-    issuer: "IBM",
-    link: "https://courses.ibmcep.cognitiveclass.ai/certificates/cb4312935d4c1648918666e584696a1",
+    title: "Certificate of Accomplishment",
+    issuer: "Samatrix Consulting Private Limited",
+    link: "https://verify.netcredential.com/roy8JaF1yJ",
   },
   {
-    title: "AWS APAC Solutions Architecture",
-    issuer: "Forage",
-    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/AbXkVjxNf3Ykcu2S",
-  },
-  {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/20ybWab2",
-  },
-  {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
+    title: "Certificate of Accomplishment",
+    issuer: "Samatrix Consulting Private Limited",
     link: "https://verify.netcredential.com/roy80vpaR2",
   },
   {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/RoyBqE6d1",
+    title: "Certificate of Accomplishment",
+    issuer: "Samatrix Consulting Private Limited",
+    link: "https://verify.netcredential.com/roy8ktLKpQ",
   },
   {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/roy8uTTG4hU",
+    title: "Certificate of Accomplishment",
+    issuer: "Samatrix Consulting Private Limited",
+    link: "https://verify.netcredential.com/roy8ajhyA0",
   },
   {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/roy8JaF1yJ",
+    title: "Certificate of Accomplishment",
+    issuer: "Samatrix Consulting Private Limited",
+    link: "https://verify.netcredential.com/roy8qjEaX1",
+  },
+  {
+    title: "Certificate of Accomplishment",
+    issuer: "Samatrix Consulting Private Limited",
+    link: "https://verify.netcredential.com/roy84TUGhU",
+  },
+  {
+    title: "Data Analysis with Python",
+    issuer: "IBM",
+    link: "https://courses.ibmcep.cognitiveclass.ai/certificates/c84312958cd14a168918866e584699a1",
+  },
+  {
+    title: "AWS APAC",
+    issuer: "Forage",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/aMXsTyHdNT5hucn25",
   },
 ];
 
