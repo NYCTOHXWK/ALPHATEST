@@ -34,7 +34,7 @@ export const siteProjects: SiteProject[] = [
       "Focused on reliable handling of finance-related process data.",
       "Structured the solution to support day-to-day operational use."
     ],
-    image: "/projects/findoc.svg",
+    image: "https://source.unsplash.com/1200x675/?human,finance,office",
     projectUrl: "https://www.hdfcbank.com/",
     technicalOverview:
       "FinDoc centralizes customer document intake, verification status, and decision checkpoints in one workflow panel. The system design focused on reducing process latency from document collection to loan-file readiness.",
@@ -74,7 +74,7 @@ export const siteProjects: SiteProject[] = [
       "Integrated electrical subsystems for practical operation.",
       "Validated the converted setup through hands-on testing."
     ],
-    image: "/projects/motovolt.svg",
+    image: "https://source.unsplash.com/1200x675/?human,electric,bike,engineering",
     technicalOverview:
       "MotoVolt transforms a conventional bike chassis into an electric mobility platform with battery management, motor control, and safety cutoffs. The project prioritized practical road behavior and predictable power delivery.",
     architecture: [
@@ -113,7 +113,7 @@ export const siteProjects: SiteProject[] = [
       "Used microcontroller programming for control behavior.",
       "Iterated on design through build-test cycles."
     ],
-    image: "/projects/drone.svg",
+    image: "https://source.unsplash.com/1200x675/?human,drone,technology",
     projectUrl: "https://www.arduino.cc/",
     technicalOverview:
       "The drone prototype combines an Arduino-based flight logic layer with sensor feedback to stabilize orientation during short test flights. Iterative tuning was used to improve hover reliability.",
@@ -153,7 +153,7 @@ export const siteProjects: SiteProject[] = [
       "Implemented RFID read and authorization handling.",
       "Focused on low-cost and practical deployment design."
     ],
-    image: "/projects/access-management.svg",
+    image: "https://source.unsplash.com/1200x675/?human,security,access,card",
     technicalOverview:
       "This project validates RFID cards against authorized records and triggers controlled entry actions. It emphasizes low-cost deployment while preserving clear access logs for traceability.",
     architecture: [
@@ -192,7 +192,7 @@ export const siteProjects: SiteProject[] = [
       "Implemented data entry and retrieval flows.",
       "Designed for clarity and ease of use in academic settings."
     ],
-    image: "/projects/sms.svg",
+    image: "https://source.unsplash.com/1200x675/?human,student,computer,education",
     technicalOverview:
       "The system manages student profiles, enrollment data, and record retrieval with a clean Python-driven workflow. It was designed for straightforward daily academic administration.",
     architecture: [
