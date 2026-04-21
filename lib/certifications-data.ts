@@ -73,7 +73,7 @@ export const certifications: Certification[] = [
     image: "https://image.thum.io/get/width/1200/noanimate/https://courses.ibmcep.cognitiveclass.ai/certificates/c84312958cd14a168918866e584699a1"
   },
   {
-    title: "AWS APAC",
+    title: "AWS APAC Solutions Architecture Job Simulation",
     issuer: "Forage",
     credentialId: "aMXsTyHdNT5hucn25",
     issued: "Dec 2024",
