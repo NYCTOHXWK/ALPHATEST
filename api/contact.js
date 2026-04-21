@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const destinationEmail = process.env.CONTACT_EMAIL?.trim() || "takemydick0@gmail.com";
+const destinationEmail = process.env.CONTACT_EMAIL?.trim() || "takemydick0@
 
 const rateLimit = {};
 

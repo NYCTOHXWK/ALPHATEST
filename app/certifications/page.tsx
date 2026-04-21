@@ -6,6 +6,9 @@ export default function CertificationsPage() {
       <section className="page-intro">
         <p className="eyebrow">Certifications</p>
         <h1>Verified licenses and certifications.</h1>
+        <p className="lead narrow">
+          Auto-scrolling certification cards keep the focus on the center credential every 3 seconds.
+        </p>
       </section>
 
       <section className="content-section">

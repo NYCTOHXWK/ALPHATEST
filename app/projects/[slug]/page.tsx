@@ -6,6 +6,9 @@ type ProjectDetailsPageProps = {
   params: Promise<{
     slug: string;
   }>;
+  params: {
+    slug: string;
+  };
 };
 
 export function generateStaticParams() {
@@ -15,6 +18,8 @@ export function generateStaticParams() {
 export default async function ProjectDetailsPage({ params }: ProjectDetailsPageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
+export default function ProjectDetailsPage({ params }: ProjectDetailsPageProps) {
+  const project = getProjectBySlug(params.slug);
   if (!project) {
     notFound();
   }
