@@ -786,3 +786,15 @@ html[data-theme="dark"] .theme-toggle-thumb {
     padding: 1rem;
   }
 }  
+/* === CERT SLIDES FIX === */
+
+/* Remove spacing for last section */
+.page-stack > section:last-child {
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensure full height slides work */
+.page-stack > section:last-child section {
+  height: 100vh;
+}
