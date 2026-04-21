@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
+const DEVICE_ID_KEY = "portfolio-device-id";
 
 function getPreferredTheme(): Theme {
   if (typeof window === "undefined") {
     return "light";
   }
 
-  const storedTheme = window.localStorage.getItem("theme");
+  const storedTheme = window.localStorage.getItem(getThemeStorageKey());
   if (storedTheme === "light" || storedTheme === "dark") {
     return storedTheme;
   }
@@ -17,6 +18,17 @@ function getPreferredTheme(): Theme {
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
+}
+
+function getThemeStorageKey() {
+  const storedDeviceId = window.localStorage.getItem(DEVICE_ID_KEY);
+  if (storedDeviceId) {
+    return `theme:${storedDeviceId}`;
+  }
+
+  const generatedDeviceId = `${Math.random().toString(36).slice(2, 10)}-${Date.now().toString(36)}`;
+  window.localStorage.setItem(DEVICE_ID_KEY, generatedDeviceId);
+  return `theme:${generatedDeviceId}`;
 }
 
 export function ThemeToggle() {
@@ -35,7 +47,7 @@ export function ThemeToggle() {
     const nextTheme: Theme = isDark ? "light" : "dark";
     setTheme(nextTheme);
     document.documentElement.dataset.theme = nextTheme;
-    window.localStorage.setItem("theme", nextTheme);
+    window.localStorage.setItem(getThemeStorageKey(), nextTheme);
   }
 
   return (

@@ -1,57 +1,86 @@
 "use client";
 
-const certs = [
-  {
-    title: "Big Data Engineer",
-    issuer: "IBM",
-    link: "https://courses.ibmcep.cognitiveclass.ai/certificates/51588b3bb671473385a04ab424b8c506",
-  },
-  {
-    title: "Data Analysis with Python",
-    issuer: "IBM",
-    link: "https://courses.ibmcep.cognitiveclass.ai/certificates/cb4312935d4c1648918666e584696a1",
-  },
-  {
-    title: "AWS APAC Solutions Architecture",
-    issuer: "Forage",
-    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AWS/AbXkVjxNf3Ykcu2S",
-  },
-  {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/20ybWab2",
-  },
-  {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/roy80vpaR2",
-  },
-  {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/RoyBqE6d1",
-  },
-  {
-    title: "Samatrix Certification",
-    issuer: "Samatrix.io",
-    link: "https://verify.netcredential.com/roy8uTTG4hU",
-  },
-];
+import { useEffect, useMemo, useState } from "react";
+import { certifications } from "@/lib/certifications-data";
 
-export default function CertSlides() {
+type CertSlidesProps = {
+  compact?: boolean;
+  showAll?: boolean;
+};
+
+function getVisibleIndexes(activeIndex: number, length: number) {
+  const previous = (activeIndex - 1 + length) % length;
+  const next = (activeIndex + 1) % length;
+  return [previous, activeIndex, next];
+}
+
+export default function CertSlides({ compact = false, showAll = false }: CertSlidesProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (showAll) {
+      return;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % certifications.length);
+    }, 3000);
+
+    return () => window.clearInterval(timer);
+  }, [showAll]);
+
+  const visibleCards = useMemo(() => {
+    const [previous, current, next] = getVisibleIndexes(activeIndex, certifications.length);
+    return [
+      { position: "side", cert: certifications[previous], key: `${certifications[previous].credentialId}-previous` },
+      { position: "center", cert: certifications[current], key: `${certifications[current].credentialId}-center` },
+      { position: "side", cert: certifications[next], key: `${certifications[next].credentialId}-next` }
+    ];
+  }, [activeIndex]);
+
   return (
     <div>
-      <h2>Certifications</h2>
-
-      <ul>
-        {certs.map((cert, i) => (
-          <li key={i}>
-            <a href={cert.link} target="_blank">
-              {cert.title} - {cert.issuer}
-            </a>
-          </li>
-        ))}
-      </ul>
+      {!compact && <h2>Certifications</h2>}
+      {showAll ? (
+        <div className="cert-grid-all">
+          {certifications.map((cert) => (
+            <article className="cert-card cert-card-center" key={cert.credentialId}>
+              <img className="cert-image" src={cert.image} alt={`${cert.issuer} certificate preview`} loading="lazy" />
+              <div className="cert-content">
+                <p className="mini-label">{cert.issuer}</p>
+                <h3>{cert.title}</h3>
+                <p>Issued {cert.issued}</p>
+                <p>Credential ID: {cert.credentialId}</p>
+                <a className="text-link" href={cert.link} target="_blank" rel="noreferrer">
+                  Show credential
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="cert-carousel" aria-live="polite">
+          {visibleCards.map((item) => (
+            <article className={`cert-card cert-card-${item.position}`} key={item.key}>
+              <img
+                className="cert-image"
+                src={item.cert.image}
+                alt={`${item.cert.issuer} certificate preview`}
+                loading="lazy"
+              />
+              <div className="cert-content">
+                <p className="mini-label">{item.cert.issuer}</p>
+                <h3>{item.cert.title}</h3>
+                <p>Issued {item.cert.issued}</p>
+                <p>Credential ID: {item.cert.credentialId}</p>
+                <a className="text-link" href={item.cert.link} target="_blank" rel="noreferrer">
+                  Show credential
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
