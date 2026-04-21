@@ -3,17 +3,18 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, siteProjects } from "@/lib/site-data";
 
 type ProjectDetailsPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return siteProjects.map((project) => ({ slug: project.slug }));
 }
 
-export default function ProjectDetailsPage({ params }: ProjectDetailsPageProps) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectDetailsPage({ params }: ProjectDetailsPageProps) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
   if (!project) {
     notFound();
   }

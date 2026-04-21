@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
@@ -13,9 +14,24 @@ const navItems = [
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const [isFolded, setIsFolded] = useState(false);
+
+  useEffect(() => {
+    let previousY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      const scrollingDown = currentY > previousY;
+      setIsFolded(scrollingDown && currentY > 48);
+      previousY = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="site-header">
+    <header className="site-header" data-folded={isFolded}>
       <Link className="brand" href="/">
         Vinay
       </Link>

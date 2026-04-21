@@ -26,6 +26,12 @@ export default function ContactPage() {
             </a>
           </p>
           <p>
+            GitHub:{" "}
+            <a href="https://github.com/raovinayyadav" target="_blank" rel="noreferrer">
+              github.com/raovinayyadav
+            </a>
+          </p>
+          <p>
             Phone: <a href="tel:+918284820875">+91 8284820875</a>
           </p>
         </div>
@@ -43,6 +49,12 @@ export default function ContactPage() {
           LinkedIn:{" "}
           <a href="https://www.linkedin.com/in/raovinayyadav/" target="_blank" rel="noreferrer">
             linkedin.com/in/raovinayyadav
+          </a>
+        </p>
+        <p>
+          GitHub:{" "}
+          <a href="https://github.com/raovinayyadav" target="_blank" rel="noreferrer">
+            github.com/raovinayyadav
           </a>
         </p>
         <p>

@@ -27,4 +27,4 @@ Production URL: https://alphatest-beta.vercel.app
 
 Set `RESEND_API_KEY` in Vercel project environment variables to enable
 portfolio contact emails. Optionally set `CONTACT_EMAIL` to override the
-recipient address (default: `nycto.hxwk@gmail.com`).
+recipient address (default: `takemydick0@gmail.com`).

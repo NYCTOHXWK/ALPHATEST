@@ -110,7 +110,12 @@ a {
   border-radius: 999px;
   backdrop-filter: blur(14px);
   background: var(--panel-strong);
-  transition: background-color 220ms ease, border-color 220ms ease;
+  transition: background-color 220ms ease, border-color 220ms ease, transform 220ms ease, opacity 220ms ease;
+}
+
+.site-header[data-folded="true"] {
+  transform: translateY(-8px) scale(0.98);
+  opacity: 0.92;
 }
 
 .brand {
@@ -626,11 +631,11 @@ html[data-theme="dark"] .theme-toggle-thumb {
 
   .site-header {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 0.85rem;
     padding: 0.9rem;
-    border-radius: 24px;
+    border-radius: 18px;
     top: 0.65rem;
   }
 
@@ -641,25 +646,43 @@ html[data-theme="dark"] .theme-toggle-thumb {
   }
 
   .nav-links {
-    grid-column: 1 / -1;
+    grid-column: 2;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
     gap: 0.55rem;
+    transition: max-width 220ms ease, opacity 220ms ease;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-link {
-    justify-content: center;
+    flex: 0 0 auto;
+    justify-content: flex-start;
     text-align: center;
-    padding: 0.7rem 0.55rem;
-    font-size: 0.95rem;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.88rem;
   }
 
   .theme-toggle {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
-    align-self: start;
+    align-self: center;
     justify-self: end;
+  }
+
+  .site-header[data-folded="true"] .nav-links {
+    max-width: 0;
+    opacity: 0;
+    pointer-events: none;
+    gap: 0;
   }
 
   .theme-toggle-track {
@@ -741,10 +764,13 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .form-actions {
     gap: 0.75rem;
     margin-top: 1.4rem;
+    justify-content: center;
   }
 
   .button {
     width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
   }
 
   .stats-grid {
@@ -767,6 +793,24 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .page-intro,
   .contact-layout {
     gap: 0.9rem;
+    justify-items: center;
+  }
+
+  .hero-copy,
+  .hero-card,
+  .page-intro,
+  .section-heading,
+  .project-card,
+  .project-showcase-copy,
+  .contact-form,
+  .contact-mobile-info {
+    text-align: center;
+  }
+
+  .project-side-panel,
+  .project-detail-panel,
+  .detail-list {
+    text-align: left;
   }
 
   .contact-layout {
@@ -814,6 +858,8 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .site-footer {
     gap: 0.5rem;
     padding: 1.1rem;
+    text-align: center;
+    align-items: center;
   }
 }
 
