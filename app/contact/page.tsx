@@ -31,6 +31,9 @@ export default function ContactPage() {
               github.com/raovinayyadav
             </a>
           </p>
+          <p>
+            Phone: <a href="tel:+918284820875">+91 8284820875</a>
+          </p>
         </div>
 
         <ContactForm />
@@ -53,6 +56,9 @@ export default function ContactPage() {
           <a href="https://github.com/raovinayyadav" target="_blank" rel="noreferrer">
             github.com/raovinayyadav
           </a>
+        </p>
+        <p>
+          Phone: <a href="tel:+918284820875">+91 8284820875</a>
         </p>
       </section>
     </div>
