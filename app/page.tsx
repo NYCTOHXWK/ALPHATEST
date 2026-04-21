@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteProjects, siteStats } from "@/lib/site-data";
+import CertSlides from "@/components/CertSlides";
 
 export default function HomePage() {
   return (
@@ -69,7 +70,13 @@ export default function HomePage() {
             </article>
           ))}
         </div>
+        </section>
+
+      {/* ADD THIS */}
+      <section>
+        <CertSlides />
       </section>
+
     </div>
   );
 }
