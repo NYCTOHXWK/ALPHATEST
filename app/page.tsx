@@ -24,7 +24,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="hero-card surface-card">
+        <div className="hero-card surface-card glass">
           <p className="eyebrow">Quick Snapshot</p>
           <h2>Available for AI, IoT, and full-stack engineering projects.</h2>
           <div className="stats-grid">
