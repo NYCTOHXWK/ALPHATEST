@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Access management project preview">
+  <rect width="640" height="360" fill="#231b2e"/>
+  <rect x="220" y="80" width="200" height="210" rx="20" fill="#3b2b4e"/>
+  <rect x="260" y="115" width="120" height="80" rx="8" fill="#a57ecf"/>
+  <circle cx="320" cy="240" r="24" fill="#d7b7ff"/>
+  <path d="M320 240v24" stroke="#3b2b4e" stroke-width="6"/>
+  <rect x="70" y="130" width="110" height="70" rx="10" fill="#cfa7ff"/>
+  <rect x="84" y="148" width="82" height="12" rx="6" fill="#5e3f81"/>
+  <text x="60" y="68" fill="#edd8ff" font-size="34" font-family="Arial" font-weight="700">Access Management</text>
+</svg>

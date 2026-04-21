@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="MotoVolt project preview">
+  <rect width="640" height="360" fill="#0f1f18"/>
+  <rect y="250" width="640" height="110" fill="#1d3a2f"/>
+  <circle cx="200" cy="260" r="52" fill="#101010"/><circle cx="200" cy="260" r="24" fill="#47d18c"/>
+  <circle cx="430" cy="260" r="52" fill="#101010"/><circle cx="430" cy="260" r="24" fill="#47d18c"/>
+  <path d="M190 255L280 190h110l50 65" fill="none" stroke="#b6f5d3" stroke-width="12" stroke-linecap="round"/>
+  <path d="M290 190l-35-45h62" fill="none" stroke="#47d18c" stroke-width="10" stroke-linecap="round"/>
+  <rect x="314" y="205" width="82" height="40" rx="8" fill="#47d18c"/>
+  <text x="64" y="84" fill="#ccffe8" font-size="46" font-family="Arial" font-weight="700">MotoVolt</text>
+</svg>
