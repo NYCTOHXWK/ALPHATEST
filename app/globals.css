@@ -644,7 +644,7 @@ html[data-theme="dark"] .theme-toggle-thumb {
     grid-column: 1 / -1;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.55rem;
   }
 
@@ -741,10 +741,13 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .form-actions {
     gap: 0.75rem;
     margin-top: 1.4rem;
+    justify-content: center;
   }
 
   .button {
     width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
   }
 
   .stats-grid {
@@ -767,6 +770,24 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .page-intro,
   .contact-layout {
     gap: 0.9rem;
+    justify-items: center;
+  }
+
+  .hero-copy,
+  .hero-card,
+  .page-intro,
+  .section-heading,
+  .project-card,
+  .project-showcase-copy,
+  .contact-form,
+  .contact-mobile-info {
+    text-align: center;
+  }
+
+  .project-side-panel,
+  .project-detail-panel,
+  .detail-list {
+    text-align: left;
   }
 
   .contact-layout {
@@ -814,6 +835,8 @@ html[data-theme="dark"] .theme-toggle-thumb {
   .site-footer {
     gap: 0.5rem;
     padding: 1.1rem;
+    text-align: center;
+    align-items: center;
   }
 }
 
