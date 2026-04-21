@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const destinationEmail = process.env.CONTACT_EMAIL?.trim() || "nycto.hxwk@gmail.com";
 
 const rateLimit = {};
 
@@ -66,7 +67,7 @@ export default async function handler(req, res) {
 
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: "nycto.hxwk@gmail.com",
+      to: destinationEmail,
       subject: `New message from ${cleanName}`,
       html: `
         <div style="font-family: Arial; padding: 16px;">
