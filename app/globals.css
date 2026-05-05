@@ -638,8 +638,14 @@ html[data-theme="dark"] .theme-toggle-thumb {
     gap: 0.85rem;
     padding: 0.9rem;
     border-radius: 18px;
-    top: 0.65rem;
+    top: 0.5rem;
+    background: color-mix(in srgb, var(--panel-strong) 92%, transparent);
   }
+
+  .hero-copy {
+    padding-top: 1.35rem;
+  }
+
 
   .site-footer {
     flex-direction: column;
@@ -703,7 +709,7 @@ html[data-theme="dark"] .theme-toggle-thumb {
 
   .page-stack {
     gap: 1.35rem;
-    padding-top: 2rem;
+    padding-top: 3.4rem;
   }
 
   .hero-panel {
@@ -724,8 +730,8 @@ html[data-theme="dark"] .theme-toggle-thumb {
 
   h1 {
     max-width: none;
-    font-size: clamp(2.35rem, 12vw, 3.5rem);
-    line-height: 0.98;
+    font-size: clamp(2.1rem, 10vw, 3rem);
+    line-height: 1.06;
   }
 
   .page-intro h1 {
