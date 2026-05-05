@@ -1037,8 +1037,8 @@ html[data-theme="dark"] .cert-card {
 
 @media (max-width: 680px) {
   .cert-carousel {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.45rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .cert-card {
@@ -1046,12 +1046,21 @@ html[data-theme="dark"] .cert-card {
   }
 
   .cert-card-side {
-    transform: scale(0.76);
-    opacity: 0.62;
+    display: none;
   }
 
   .cert-card-center {
-    transform: scale(0.9);
+    transform: none;
+    opacity: 1;
+  }
+
+  .cert-image {
+    aspect-ratio: 4 / 3;
+    padding: 0.45rem;
+  }
+
+  .cert-content {
+    padding: 0.9rem 0.9rem 1rem;
   }
 
   .cert-grid-all,
