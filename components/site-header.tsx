@@ -30,12 +30,18 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const shouldCollapseNav = isFolded;
+
   return (
     <header className="site-header" data-folded={isFolded}>
       <Link className="brand" href="/">
         Vinay
       </Link>
-      <nav className="nav-links" aria-label="Primary">
+      <nav
+        className="nav-links"
+        aria-label="Primary"
+        aria-hidden={shouldCollapseNav}
+      >
         {navItems.map((item) => {
           const isActive = pathname === item.href;
 
@@ -45,6 +51,7 @@ export function SiteHeader() {
               className="nav-link"
               href={item.href}
               data-active={isActive}
+              tabIndex={shouldCollapseNav ? -1 : 0}
             >
               {item.label}
             </Link>

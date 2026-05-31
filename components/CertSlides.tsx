@@ -8,6 +8,17 @@ type CertSlidesProps = {
   showAll?: boolean;
 };
 
+
+const fallbackByIssuer: Record<string, string> = {
+  IBM: "/certificates/ibm.svg",
+  "Samatrix Consulting Private Limited": "/certificates/samatrix.svg",
+  Forage: "/certificates/forage.svg"
+};
+
+function getFallbackImage(issuer: string) {
+  return fallbackByIssuer[issuer] ?? "/certificates/ibm.svg";
+}
+
 function getVisibleIndexes(activeIndex: number, length: number) {
   const previous = (activeIndex - 1 + length) % length;
   const next = (activeIndex + 1) % length;
@@ -45,7 +56,9 @@ export default function CertSlides({ compact = false, showAll = false }: CertSli
         <div className="cert-grid-all">
           {certifications.map((cert) => (
             <article className="cert-card cert-card-center" key={cert.credentialId}>
-              <img className="cert-image" src={cert.image} alt={`${cert.issuer} certificate preview`} loading="lazy" />
+              <img className="cert-image" src={cert.image} alt={`${cert.issuer} certificate preview`} loading="lazy" decoding="async" onError={(event) => {
+                  event.currentTarget.src = getFallbackImage(cert.issuer);
+                }} />
               <div className="cert-content">
                 <p className="mini-label">{cert.issuer}</p>
                 <h3>{cert.title}</h3>
@@ -67,6 +80,10 @@ export default function CertSlides({ compact = false, showAll = false }: CertSli
                 src={item.cert.image}
                 alt={`${item.cert.issuer} certificate preview`}
                 loading="lazy"
+                decoding="async"
+                onError={(event) => {
+                  event.currentTarget.src = getFallbackImage(item.cert.issuer);
+                }}
               />
               <div className="cert-content">
                 <p className="mini-label">{item.cert.issuer}</p>
